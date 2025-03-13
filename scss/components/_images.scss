@@ -1,0 +1,43 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.main-content__section5-1__main__right__image {
+  object-fit: cover;
+  position: absolute;
+  background-image: url(../../assets/img/k2_imahe.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 0;
+  clip-path: $clip-path4;
+  height: 60%;
+  width: 60%;
+  z-index: 0;
+  &::before {
+    @include overlay($image-black-tint, -2);
+  }
+  &:after {
+    @include overlay($image-red-tint, -1);
+  }
+}
+
+.main-content__section3__right__image {
+  position: absolute;
+  object-fit: cover;
+  background-image: url(../..//assets/img/boxing_coach.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 0;
+  clip-path: $clip-path2;
+  height: 67%;
+  width: 44%;
+  z-index: 0;
+  &::before {
+    @include overlay($image-black-tint, -2);
+  }
+  &:after {
+    @include overlay($image-red-tint, -1);
+  }
+}

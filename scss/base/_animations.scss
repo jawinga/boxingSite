@@ -1,0 +1,17 @@
+@keyframes navLinkAnimation {
+    0% {
+        opacity: 0;
+        width: 0;
+        transform: translateY(-10px);
+    }
+    50% {
+        opacity: 0.5;
+        width: 50%;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        transform: translateY(0);
+    }
+}

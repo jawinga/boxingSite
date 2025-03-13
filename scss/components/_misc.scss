@@ -1,0 +1,132 @@
+// <div class="carousel__circles">
+//             <div class="carousel__circles__circle"></div>
+//             <div class="carousel__circles__circle"></div>
+//             <div class="carousel__circles__circle"></div>
+//           </div>
+
+//circles
+
+.carousel__circles {
+  display: flex;
+  gap: 0.5rem; // Adds spacing between circles
+
+  &__circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+
+  &__circle--on {
+    @extend .carousel__circles__circle; // Inherits width, height, and border-radius
+    background-color: $color-red;
+  }
+
+  &__circle--off {
+    @extend .carousel__circles__circle;
+    background-color: $color-white;
+    border: 2px solid $color-red; // Optional for visibility
+  }
+}
+
+//parallelogram
+
+.main-content__section3 {
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 700px;
+    gap: 3rem;
+
+    &__title {
+      font-size: $font-size-h2;
+      text-align: left !important;
+      font-weight: $font-black-weight;
+      color: $color-red;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    &__text {
+      font-size: $font-size-base;
+      text-align: left !important;
+      font-weight: $font-text-weight;
+      color: $color-white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    &__values {
+      display: flex;
+      justify-content: space-around;
+
+      &__value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.parallelogram {
+  clip-path: polygon(0 0, 35% 20%, 35% 100%, 0 80%);
+  width: 50px;
+  height: 100px;
+
+  &--1 {
+    background-color: $color-white;
+  }
+  &--2 {
+    background-color: $color-red;
+  }
+  &--3 {
+    @include stripes;
+  }
+
+  &__title {
+    font-size: $font-size-h4;
+    font-weight: $font-black-weight;
+    color: $color-white;
+    text-align: center;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  &__title-1 {
+    font-size: $font-size-h4;
+    font-weight: $font-black-weight;
+    color: $color-black;
+    text-align: center;
+    padding: 1rem;
+    text-align: left;
+  }
+}
+
+.why_join--1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why_join--2 {
+  justify-content: flex-start;
+
+  &__text {
+    text-align: start !important;
+  }
+}
+
+blockquote {
+  color: $color-white;
+  font-style: italic;
+  font-size: $font-size-base;
+  text-align: start !important;
+  line-height: 3rem;
+}
+
+cite {
+  color: $color-white;
+  text-align: start;
+}

@@ -1,0 +1,34 @@
+@import "global";
+
+//abstracts
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+//base
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+@import "base/animations";
+
+//components
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/nav-bar";
+@import "components/misc";
+@import "components/carousel";
+@import "components/images";
+@import "components/step";
+@import "components/coaches";
+@import "components/blog";
+
+//layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main-content";
+
+//pages
+
+@import "pages/home";

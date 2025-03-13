@@ -1,0 +1,45 @@
+//font style
+$font-primary: "Pathway Extreme", serif;
+
+//font weight
+$font-black-weight: 900;
+$font-text-weight: 300;
+$font-weight-light: 50;
+$font-cta-weight: 700;
+
+//font sizes
+$font-size-base: 1.875em;
+$font-size-h1: 6.25em;
+$font-size-h2: 4.25em;
+$font-size-h3: 2.625em;
+$font-size-h4: 1.875em;
+$cta-size: 1.5em;
+$cta2-size: 2.2em;
+$nav-link-size: 2em;
+$title_bottom_gap: 3rem;
+
+//box-shadow
+
+$box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+//clip paths
+
+$clip-path1: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+$clip-path2: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+$clip-path3: polygon(37% 0, 100% 0, 100% 100%, 0% 100%);
+$clip-path4: polygon(38% 0, 100% 0, 100% 100%, 0% 100%);
+
+//image tints
+
+$image-red-tint: rgba(255, 0, 0, 0.15);
+$image-black-tint: rgba(0, 0, 0, 0.5);
+
+//cards SERVICES
+
+$card-width: 27rem; // 464px / 16
+$card-height: 34.125rem; // 546px / 16
+$padding-v: 3.125rem; // 50px / 16
+$padding-h: 3.875rem; // 62px / 16
+$list-width: 21.875rem; // 350px / 16
+$list-width: 21.875rem; // 350px / 16

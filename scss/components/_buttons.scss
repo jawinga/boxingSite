@@ -1,0 +1,85 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/colors";
+@import "../base/animations";
+@import "../base/typography";
+
+//primary CTA
+
+.cta {
+  width: max-content;
+  align-self: flex-start;
+  box-shadow: $box-shadow;
+  background-color: $color-red;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 2.6rem;
+  transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: $cta-size;
+    font-weight: $font-cta-weight;
+    color: $color-white;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    white-space: nowrap;
+  }
+}
+
+.cta2 {
+  text-transform: uppercase;
+  font-size: $cta2-size;
+  font-weight: $font-cta-weight;
+  font-style: italic;
+  color: $color-white;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: $color-red;
+  border: none;
+  text-decoration-thickness: 0.4rem;
+  text-underline-offset: 30%;
+  //clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.cta2-1 {
+  text-transform: uppercase;
+  font-size: $cta2-size;
+  font-weight: $font-cta-weight;
+  font-style: italic;
+  color: $color-black;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: $color-red;
+  border: none;
+  text-decoration-thickness: 0.4rem;
+  text-underline-offset: 30%;
+}
+
+// .cta2 {
+//     text-transform: uppercase;
+//     font-size: $cta2-size;
+//     font-weight: $font-cta-weight;
+//     font-style: italic;
+//     color: $color-white;
+//     background-color: transparent; // Use transparent instead of none
+//     cursor: pointer;
+//     text-decoration: underline;
+//     text-decoration-color: $color-red;
+//     border: none;
+//     text-decoration-thickness: 0.4rem;
+//     text-underline-offset: 30%;
+//     // Optionally, if using a button element, reset default styling:
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+//   }

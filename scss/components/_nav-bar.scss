@@ -1,0 +1,81 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import '../abstracts/colors';
+@import '../base/animations';
+
+.navbar{
+
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+
+    .logo{
+        width: 5em;
+        height:  5em;
+        margin-left: 1.5em;
+
+    }
+    
+    .nav-links{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+
+        li{
+            flex: 1;
+            list-style: none;
+            margin-right: 2.75em;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $color-white;
+                font-size: $nav-link-size;
+                font-weight: $font-text-weight;
+                @include underline-animation;
+    
+               
+    
+                &:hover {
+                    color: $color-white;
+                    text-decoration: none;  
+                }
+    
+            
+
+    
+        
+    }
+
+
+   
+
+}
+
+}
+
+.nav-languages{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:1.5em;
+    margin-right: 1.5em;
+
+    li{
+        list-style: none;
+        align-items: center;
+        cursor: pointer;
+        
+    
+    }
+
+}
+}

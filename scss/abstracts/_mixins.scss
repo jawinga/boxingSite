@@ -1,0 +1,84 @@
+@import "variables";
+@import "colors";
+
+@mixin underline-animation {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    bottom: -6px;
+    left: 0;
+    background-color: $color-red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@mixin underline {
+  text-decoration: underline;
+  text-decoration-color: $color-red;
+  border: none;
+  text-decoration-thickness: 0.4em;
+  text-underline-offset: 30%;
+}
+
+@mixin overlay($color, $z-index) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $color;
+  z-index: $z-index;
+}
+
+@mixin stripes {
+  background-image: url(../assets/img/stripped_pattern.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin card(
+  $card-width,
+  $card-height,
+  $padding-v,
+  $padding-h,
+  $bg-image,
+  $bg-position: left center
+) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $card-width;
+  height: $card-height;
+  padding: $padding-v $padding-h;
+  background-image: url(#{$bg-image});
+  background-size: cover;
+  background-position: $bg-position;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  &::before {
+    @include overlay($image-black-tint, -2);
+  }
+
+  &::after {
+    @include overlay($image-red-tint, -1);
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}

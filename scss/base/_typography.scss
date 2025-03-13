@@ -1,0 +1,48 @@
+@import '../abstracts/variables';
+@import '../abstracts/colors';
+
+
+body {
+  font-family: $font-primary;
+  background-color: $color-black;
+}
+
+.nav-element{
+
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: $nav-link-size;
+}
+
+h1, h2, h3, h4{
+
+    font-weight: $font-black-weight;
+    text-transform: uppercase;
+
+}
+
+h1{
+
+    font-size: $font-size-h1;
+}
+h2{
+
+    font-size: $font-size-h2;
+}
+
+h3{
+
+    font-size: $font-size-h3;
+}
+
+p, span{
+    font-size: $font-size-base;
+    font-weight: $font-text-weight;
+    font-style: italic;
+}
+
+.cta, .cta2{
+    font-size: $cta-size;
+    font-weight: $font-cta-weight;
+    text-transform: uppercase;
+}

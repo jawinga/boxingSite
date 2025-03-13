@@ -1,0 +1,95 @@
+.main-content__section9 {
+  &__title {
+    color: $color-white;
+  }
+
+  &__posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1.5rem;
+    height: max-content;
+    border-style: solid;
+    border-color: red;
+    border-width: 5px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &__mainPost {
+      grid-column: 1/2;
+      grid-row: 1/3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      &__title {
+        color: $color-white;
+      }
+      &__text {
+        color: $color-white;
+      }
+      &__button {
+      }
+    }
+
+    &__secondPost {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      &__title {
+        color: $color-white;
+      }
+
+      &__button {
+      }
+    }
+
+    &__thirdPost {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      &__title {
+        color: $color-white;
+      }
+      &__button {
+      }
+    }
+  }
+}
+
+//   <div class="main-content__section9__posts__secondPost">
+
+//     <h3 class="main-content__section9__posts__secondPost__title">5 ways to improve your core Strength</h3>
+//     <span class="main-content__section9__posts__secondPost__text">
+
+//       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, recusandae dolore facere ab nemo mollitia nostrum, impedit rem veritatis totam.
+
+//     </span>
+
+//     <button class="main-content__section9__posts__mainPost__button cta2">Read article</button>
+
+//   </div>
+//   <div class="main-content__section9__posts__thirdPost">
+
+//     <h3 class="main-content__section9__posts__thirdPost__title">5 ways to improve your core Strength</h3>
+//     <span class="main-content__section9__posts__thirdPost__text">
+
+//       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, recusandae dolore facere ab nemo mollitia nostrum, impedit rem veritatis totam.
+
+//     </span>
+
+//     <button class="main-content__section9__posts__mainPost__button cta2">Read article</button>
+
+//   </div>
+
+// </div>
+
+// </section>

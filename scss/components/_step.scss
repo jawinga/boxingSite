@@ -1,0 +1,71 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../base/typography";
+
+// <section class="main-content__section4">
+
+//         <h2 class="main-content__section4__title">
+//           Your journey starts today
+//         </h2>
+//         <div class="main-content__section4__steps">
+//           <div class="step">
+//             <div class="step__number">1</div>
+//             <span class="step__text">Choose your membership</span>
+//           </div>
+//           <div class="step">
+//             <div class="step__number">2</div>
+//             <span class="step__text">Sign up and try a new class</span>
+//           </div>
+//           <div class="step">
+//             <div class="step__number">3</div>
+//             <span class="step__text">Get in the best shape of your life </span>
+//           </div>
+//         </div>
+//         <div class="main-content__section4__button">
+//           <a href="#" class="cta">Start today</a>
+//         </div>
+//       </section>
+
+.main-content__section4 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+
+  &__title {
+    font-size: $font-size-h2;
+    color: $color-white;
+    width: 100%;
+  }
+
+  &__steps {
+    display: flex;
+    gap: 45px;
+  }
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  max-height: 180px;
+  max-width: 560px;
+  gap: 20px;
+
+  &__number {
+    font-size: $font-size-h1;
+    color: $color-white;
+    font-weight: $font-black-weight;
+  }
+  &__text {
+    font-size: $font-size-h3;
+    color: $color-white;
+    font-weight: $font-black-weight;
+    text-transform: uppercase;
+    font-style: normal;
+    text-align: left;
+    &-red {
+      color: red;
+    }
+  }
+}

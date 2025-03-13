@@ -1,0 +1,160 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.main-content__section7 {
+  &__title {
+    color: $color-white;
+  }
+
+  &__team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+
+    &__worker {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: 200px;
+      box-sizing: border-box;
+
+      &__img--1,
+      &__img--2,
+      &__img--3,
+      &__img--4 {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &__img--1 {
+        background-image: url(../../assets/img/coach.jpg);
+        position: relative;
+        z-index: 0;
+        &::before {
+          @include overlay($image-black-tint, -2);
+          border-radius: 50%;
+        }
+        &:after {
+          @include overlay($image-red-tint, -1);
+          border-radius: 50%;
+        }
+      }
+      &__img--2 {
+        background-image: url(../../assets/img/coach2.jpg);
+        z-index: 0;
+        position: relative;
+
+        &::before {
+          @include overlay($image-black-tint, -2);
+          border-radius: 50%;
+        }
+        &:after {
+          @include overlay($image-red-tint, -1);
+          border-radius: 50%;
+        }
+      }
+      &__img--3 {
+        background-image: url(../../assets/img/coach3.jpg);
+        position: relative;
+        z-index: 0;
+        &::before {
+          @include overlay($image-black-tint, -2);
+          border-radius: 50%;
+        }
+        &:after {
+          @include overlay($image-red-tint, -1);
+          border-radius: 50%;
+        }
+      }
+      &__img--4 {
+        background-image: url(../../assets/img/coach4.jpg);
+        z-index: 0;
+        position: relative;
+
+        &::before {
+          @include overlay($image-black-tint, -2);
+          border-radius: 50%;
+        }
+        &:after {
+          @include overlay($image-red-tint, -1);
+          border-radius: 50%;
+        }
+      }
+
+      &__name {
+        color: $color-white;
+        position: relative;
+      }
+      &__position {
+        color: $color-red;
+        text-align: center;
+        font-size: $font-size-h4;
+        position: relative;
+      }
+      &__detail {
+        color: $color-white;
+        text-align: center;
+        overflow-wrap: break-word;
+        position: relative;
+      }
+    }
+  }
+}
+
+// <section class="main-content__section7">
+
+// <h2 class="main-content__section7__title">
+//   Get to know the team
+// </h2>
+
+// <div class="main-content__section7__team">
+
+//   <div class="main-content__section7__team__worker">
+
+//     <div class="main-content__section7__team__img"></div>
+//     <h4 class="main-content__section7__team__name">
+//       Hugh Smith
+//     </h4>
+//     <span class="main-content__section7__team__position">Head coach</span>
+//     <span class="main-content__section7__team__detail">Former 2x World Champion</span>
+//   </div>
+//   <div class="main-content__section7__team__worker">
+
+//     <div class="main-content__section7__team__img"></div>
+//     <h4 class="main-content__section7__team__name">
+//       Hugh Smith
+//     </h4>
+//     <span class="main-content__section7__team__position">Head coach</span>
+//     <span class="main-content__section7__team__detail">Former 2x World Champion</span>
+//   </div>
+//   <div class="main-content__section7__team__worker">
+
+//     <div class="main-content__section7__team__img"></div>
+//     <h4 class="main-content__section7__team__name">
+//       Hugh Smith
+//     </h4>
+//     <span class="main-content__section7__team__position">Head coach</span>
+//     <span class="main-content__section7__team__detail">Former 2x World Champion</span>
+//   </div>
+//   <div class="main-content__section7__team__worker">
+
+//     <div class="main-content__section7__team__img"></div>
+//     <h4 class="main-content__section7__team__name">
+//       Hugh Smith
+//     </h4>
+//     <span class="main-content__section7__team__position">Head coach</span>
+//     <span class="main-content__section7__team__detail">Former 2x World Champion</span>
+//   </div>
+
+// </div>
+
+// </section>
