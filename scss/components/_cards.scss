@@ -68,60 +68,6 @@
   }
 }
 
-//CAROUSEL CARDS
-
-.carousel__card {
-  display: flex;
-  gap: 1.2rem;
-  box-shadow: $box-shadow;
-  flex-direction: column;
-  justify-content: start;
-  position: relative;
-  background-image: url(../assets/img/tournament.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 600px;
-  width: 541px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  z-index: 0;
-
-  &::before {
-    @include overlay($image-black-tint, -2);
-  }
-  &:after {
-    @include overlay($image-red-tint, -1);
-  }
-
-  &__feature {
-    width: min-content;
-    padding: 0.5rem;
-    color: $color-white;
-    font-weight: $font-black-weight;
-    @include stripes;
-  }
-  &__title {
-    font-size: 3.5em;
-    text-transform: uppercase;
-    max-width: 100%;
-    color: $color-white;
-    line-height: 6rem;
-    width: 560px;
-    overflow: hidden;
-    word-wrap: break-word;
-
-    &__feature {
-      color: $color-red;
-    }
-  }
-  &__button {
-    z-index: 1;
-    align-self: flex-start;
-  }
-}
 
 //Pricing information cards
 

@@ -1,0 +1,79 @@
+<div class="carousel">
+  <div class="carousel__main">
+    <div class="carousel__controls__prev">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+      >
+        <polygon
+          points="16.707 4.707 9.414 12 16.707 19.293 15.293 20.707 6.586 12 15.293 3.293 16.707 4.707"
+          fill="#ffffff"
+        />
+      </svg>
+    </div>
+    <div class="carousel__card" id="card--1">
+      <span class="carousel__card__feature">NEW</span>
+      <h2 class="carousel__card__title">
+        National Scotland Tournament
+        <div class="carousel__card__title__feature">Announced!</div>
+      </h2>
+      <button class="carousel__card__button cta2">Sign up now</button>
+    </div>
+
+    <!-- <div class="carousel__card" id="card--2">
+              <span class="carousel__card__feature">NEW</span>
+              <h2 class="carousel__card__title">
+                Boxing for kids
+                <div class="carousel__card__title__feature">ages 7-11</div>
+              </h2>
+              <button class="carousel__card__button cta2">Sign up now</button>
+            </div>
+
+            <div class="carousel__card" id="card--3">
+              <span class="carousel__card__feature">NEW</span>
+              <h2 class="carousel__card__title">
+                Sign up Get two pairs of gloves
+                <div class="carousel__card__title__feature">for free!</div>
+              </h2>
+              <button class="carousel__card__button cta2">Sign up now</button>
+            </div> -->
+
+    <div class="carousel__controls__next">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+      >
+        <polygon
+          points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"
+          fill="#ffffff"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <div class="carousel__circles">
+    <div class="carousel__circles__circle--on" id="circle-1"></div>
+    <div class="carousel__circles__circle--off" id="circle-2"></div>
+    <div class="carousel__circles__circle--off" id="circle-3"></div>
+  </div>
+
+  <!-- <div class="carousel__controls">
+              <div class="carousel__controls__prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                  <polygon points="16.707 4.707 9.414 12 16.707 19.293 15.293 20.707 6.586 12 15.293 3.293 16.707 4.707" fill="#ffffff"/>
+                </svg>
+               
+  
+              </div>
+              <div class="carousel__controls__next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                  <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707" fill="#ffffff"/>
+                </svg>
+            </div>
+  
+          </div> -->
+</div>
