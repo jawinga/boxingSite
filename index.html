@@ -96,19 +96,24 @@
             </h1>
           </div>
 
-          <a href="#" class="cta main-content__section1__left__button">
+          <a
+            href="#"
+            class="cta main-content__section1__left__button"
+            id="button-home"
+          >
             <span class="cta__text">Join today</span>
           </a>
         </div>
 
         <div class="main-content__section1__right">
-          <div class="carousel">
+          <div class="carousel" id="carousel">
             <button class="carousel__button carousel__button--left">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
+                fill="white"
               >
                 <polygon
                   points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"
@@ -122,25 +127,60 @@
                 <li class="carousel__slide">
                   <img
                     class="carousel__image"
-                    src="assets/img/tournament.jpg"
+                    src="assets/img/image.jpg"
                     alt="Boxing tournament"
                   />
+
+                  <div class="carousel__image__container">
+                    <span class="carousel__card__feature">NEW</span>
+
+                    <h2 class="carousel__image__container__title">
+                      National Scotland Tournament
+                      <div class="step__text-red">Announced</div>
+                    </h2>
+
+                    <button class="carousel__image__container__button cta2">
+                      Sign up now
+                    </button>
+                  </div>
                 </li>
 
                 <li class="carousel__slide">
                   <img
                     class="carousel__image"
-                    src="assets/img/boxing-gloves.jpg"
+                    src="assets/img/image(1).jpg"
                     alt="Boxing gloves"
                   />
+                  <div class="carousel__image__container">
+                    <span class="carousel__card__feature">OFFER</span>
+
+                    <h2 class="carousel__image__container__title">
+                      2 PAIRS OF BOXING GLOVES FOR
+                      <div class="step__text-red">FREE</div>
+                    </h2>
+
+                    <button class="carousel__image__container__button cta2">
+                      Sign up now
+                    </button>
+                  </div>
                 </li>
 
                 <li class="carousel__slide">
                   <img
                     class="carousel__image"
-                    src="assets/img/boxing-kid.jpg"
+                    src="assets/img/image(2).jpg"
                     alt="Kid's boxing class"
                   />
+                  <div class="carousel__image__container">
+                    <h2 class="carousel__image__container__title">
+                      KIDS CLASS AGES
+                      <div class="step__text-red">6-12 YEARS OLD</div>
+                    </h2>
+
+                    <button class="carousel__image__container__button cta2">
+                      Sign up now
+                    </button>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -151,17 +191,100 @@
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
+                fill="white"
               >
                 <polygon
                   points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"
                 />
               </svg>
             </button>
+            <div class="carousel__nav">
+              <button class="carousel__nav__indicator current-slide"></button>
+              <button class="carousel__nav__indicator"></button>
+              <button class="carousel__nav__indicator"></button>
+            </div>
           </div>
-          <div class="carousel__nav">
-            <button class="carousel__nav__indicator current-slide"></button>
-            <button class="carousel__nav__indicator"></button>
-            <button class="carousel__nav__indicator"></button>
+
+          <div class="form-container" id="form">
+            <div class="form-container__arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="2"
+              >
+                <path d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg>
+            </div>
+            <form action="#" method="post">
+              <h3 class="form-container__title">
+                Join our
+                <div class="step__text-red">boxing community</div>
+              </h3>
+
+              <div class="form-container__inputs">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-container__inputs__input"
+                  required
+                />
+
+                <label for="surname">Surname:</label>
+                <input
+                  type="text"
+                  id="surname"
+                  name="surname"
+                  class="form-container__inputs__input"
+                  required
+                />
+
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-container__inputs__input"
+                  required
+                />
+
+                <label for="phone">Phone:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-container__inputs__input"
+                  required
+                />
+
+                <div class="form-container__inputs__input__terms">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    required
+                    disabled
+                  />
+                  <label for="terms">
+                    I agree to the <a href="#">Terms & Conditions</a> (read
+                    first)
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  class="form-container__inputs__button cta2"
+                  id="submit"
+                >
+                  Sign up
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -877,6 +1000,14 @@
         </div>
       </section>
     </main>
-    <script src="carousel.js"></script>
+    <script src="carousel.js" defer></script>
+    <script src="form.js" defer></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/cosmogicofficial/quantumalert@latest/minfile/quantumalert.js"
+      charset="utf-8"
+      defer
+      sync
+    ></script>
   </body>
 </html>

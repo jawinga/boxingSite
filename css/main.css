@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .background-section1 {
   top: 0;
   left: 0;
@@ -559,65 +560,173 @@ cite {
   height: 600px;
   width: 80%;
   margin: 0 auto;
+  padding: 0;
+  background: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Remove overflow: hidden from here to prevent clipping arrows */
 }
+
 .carousel__button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
   border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
+
+.carousel__button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
 .carousel__button svg {
   width: 50px;
   height: 50px;
+  fill: white;
 }
+
 .carousel__button--left {
-  left: -45px;
+  left: -65px; /* Outside the carousel, as originally */
 }
+
 .carousel__button--right {
-  right: -45px;
+  right: -65px; /* Outside the carousel, as originally */
 }
-.carousel__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 .carousel__track-container {
   height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Moved overflow: hidden here to contain slides only */
 }
+
 .carousel__track {
   padding: 0;
   margin: 0;
   list-style: none;
   position: relative;
   height: 100%;
-  transition: transform 0.25s ease-in-out;
+  will-change: transform;
 }
+
 .carousel__slide {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
+
+.carousel__slide.current-slide {
+  opacity: 1;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.carousel__slide:hover .carousel__image {
+  filter: brightness(1);
+}
+
+/* Preserved your original text and button styles */
+.carousel__image__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carousel__card__feature {
+  display: min-width;
+  background-color: #e63946;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  align-self: flex-start;
+  background-image: url(../../assets/img/stripped_pattern.png);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-position: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel__image__container__title {
+  color: white;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  line-height: 4rem;
+  overflow: hidden;
+}
+
+.step__text-red {
+  color: red;
+}
+
+.carousel__image__container__button {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* Position indicators under the carousel */
 .carousel__nav {
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  width: min-content; /* Match carousel width */
+  margin: 10px auto 0; /* Center it below with spacing */
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
+
 .carousel__nav__indicator {
-  border: 0;
+  border: none;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
   margin: 0 12px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .carousel__nav__indicator.current-slide {
-  background-color: white;
+  background: #e63946;
+  transform: scale(1.2);
+}
+
+.carousel__nav__indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .main-content__section5-1__main__right__image {
@@ -973,6 +1082,77 @@ p, span {
 .main-content__section9__posts__thirdPost__title {
   color: white;
 }
+/*<div class="form-container" visibility="hidden">
+<form action="#" method="post">
+  <h2 class="form-container__title">Join our boxing community</h2>
+
+  <div class="form-container__inputs">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <button class="cta">Sign up</button>
+  </div>
+</form>
+</div>*/
+.form-container {
+  background-color: white;
+  position: relative;
+  height: 650px;
+  width: 540px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Remove overflow: hidden from here to prevent clipping arrows */
+}
+.form-container__arrow {
+  position: absolute;
+  top: 10px; /* Adjust as needed for spacing from top */
+  left: 10px; /* Adjust as needed for spacing from left */
+  z-index: 10; /* Ensures it’s above other content */
+}
+.form-container__title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.form-container__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-container__inputs__input {
+  width: 100%;
+  padding: 0.5rem;
+}
+.form-container__inputs__input__terms {
+  display: flex;
+  gap: 1rem;
+}
+.form-container__inputs__button {
+  color: black;
+  margin-top: 1rem;
+}
+
+.form-container__arrow svg {
+  width: 34px;
+  height: 34px;
+  stroke: #e63946;
+  transition: transform 0.3s ease;
+}
+
+.form-container__arrow:hover svg {
+  transform: scale(1.1);
+}
+
 .main-content {
   display: grid;
   grid-template-rows: minmax(auto, 100vh) repeat(11, minmax(100vh, auto));

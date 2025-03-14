@@ -1,0 +1,101 @@
+/*<div class="form-container" visibility="hidden">
+<form action="#" method="post">
+  <h2 class="form-container__title">Join our boxing community</h2>
+
+  <div class="form-container__inputs">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <button class="cta">Sign up</button>
+  </div>
+</form>
+</div>*/
+
+.form-container {
+
+    background-color: white;
+    position: relative;
+    height: 650px;
+    width: 540px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Remove overflow: hidden from here to prevent clipping arrows */
+
+
+    &__arrow{
+
+        position: absolute;
+        top: 10px; /* Adjust as needed for spacing from top */
+        left: 10px; /* Adjust as needed for spacing from left */
+        z-index: 10; /* Ensures it’s above other content */
+
+
+    }
+   
+
+
+    &__title{
+
+        margin-bottom: 1.5rem;
+        text-align: center;
+
+    }
+
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        label{
+
+        }
+
+        &__input{
+
+            width: 100%;
+            padding: 0.5rem;
+
+            &__terms{
+
+                display: flex;
+                gap: 1rem;
+            }
+
+
+        }
+
+        &__button{
+
+            color: black;
+            margin-top: 1rem;
+
+
+        }
+    }
+
+
+
+}
+
+  
+  .form-container__arrow svg {
+    width: 34px; 
+    height: 34px;
+    stroke: #e63946; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .form-container__arrow:hover svg {
+    transform: scale(1.1);
+  }
