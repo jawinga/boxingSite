@@ -1,5 +1,5 @@
-const track = document.querySelector('.carousel__track');
-const slides = Array.from(track.children);
+const track =  document.querySelector('.carousel__track');
+const slides =  Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
@@ -9,29 +9,32 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 console.log(slideWidth);
 
+
 const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + 'px';
+    slide.style.left = slideWidth * index + 'px';
 };
 
 slides.forEach(setSlidePosition);
 
-// Fix 1: Ensure initial current-slide
-slides[0].classList.add('current-slide');
+//When I click left, move slides to the left
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  // Fix 2: Check if targetSlide exists
-  if (targetSlide) {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + 'px)';
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
-  }
-};
+
+
+//When I click right, move slides to the right
 
 nextButton.addEventListener('click', e => {
-  const currentSlide = track.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
 
-  moveToSlide(track, currentSlide, nextSlide);
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+    const amountToMove = nextSlide.style.left;
+
+    //move to next slide
+
+    track.style.transform = 'translateX(-' + amountToMove + ')';
+    currentSlide.classList.remove('current-slide');
+    nextSlide.classList.add('current-slide');
+
+
 });
 
 
